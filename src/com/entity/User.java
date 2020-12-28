@@ -14,7 +14,7 @@ import javax.persistence.Table;
 
 public class User implements Serializable{
 	
-	 private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 	 
 	@Id  @GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
@@ -62,14 +62,5 @@ public class User implements Serializable{
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
-	
-	
-
-	
-	
-
-	
-	
 	
 }
