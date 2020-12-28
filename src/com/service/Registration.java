@@ -26,18 +26,18 @@ public class Registration extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String firstName = request.getParameter("firstName");
-        String lastName = request.getParameter("lastName");
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
-
-        User user = new User();
-        user.setFirstName(firstName);
-        user.setLastName(lastName);
-        user.setUsername(username);
-        user.setPassword(password);
-        UserDao.saveUser(user);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("register-success.jsp");
-        dispatcher.forward(request, response);
+		String lastName = request.getParameter("lastName");
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+		
+		User user = new User();
+		user.setFirstName(firstName);
+		user.setLastName(lastName);
+		user.setUsername(username);
+		user.setPassword(password);
+		UserDao.saveUser(user);
+		RequestDispatcher dispatcher = request.getRequestDispatcher("register-success.jsp");
+		dispatcher.forward(request, response);
 			
 	}
 

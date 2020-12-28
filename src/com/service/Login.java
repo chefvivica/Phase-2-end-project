@@ -30,10 +30,10 @@ public class Login extends HttpServlet {
 			if(userDao.validate(username, password)) {
 				request.setAttribute("username", username);
 				RequestDispatcher dispatcher = request.getRequestDispatcher("login-success.jsp");
-	            dispatcher.forward(request, response);
-	        } else {
-	        	response.sendRedirect("login-error.jsp");
-	        }
+		        dispatcher.forward(request, response);
+		    } else {
+		    	response.sendRedirect("login-error.jsp");
+		    }
 		} catch (Exception e) {
 			response.sendRedirect("index.jsp?error=1");
 		}
